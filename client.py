@@ -6,7 +6,7 @@ host ='127.0.0.1'
 port=9999
 
 c.connect((host,port))
-print c.recv(1024)
+#print c.recv(1024)
 name=raw_input('Enter username:')
 c.send(name)
 #Sending username first.
@@ -17,6 +17,10 @@ user=raw_input("Please enter the username you want to talk to:")
 c.send(user)
 print c.recv(1024)
 #c.send("quit")
+data=raw_input('->')
+c.send(data)
+reply=c.recv(1024)
+print reply
 while data:
 	data=raw_input("->")
 	c.send(data)
