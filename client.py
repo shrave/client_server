@@ -10,7 +10,7 @@ name=raw_input('Enter username:')
 c.send(name)
 flag=1
 while flag:
-	data=raw_input('Username:Message')
+	data=raw_input('Message')
 	c.send(data)
 	reply=c.recv(1024)
 	if reply:
@@ -18,4 +18,4 @@ while flag:
 	if data=='quit':
 		flag=0
 c.close()
-#Make a mechanism if reply not there for another connection.
+
